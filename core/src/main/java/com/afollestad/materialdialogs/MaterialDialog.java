@@ -1135,6 +1135,7 @@ public class MaterialDialog extends DialogBase
     protected boolean wrapCustomViewInScroll;
     protected int dividerColor;
     protected int backgroundColor;
+    protected int backgroundCornerSize;
     protected int itemColor;
     protected boolean indeterminateProgress;
     protected boolean showMinMax;
@@ -1941,6 +1942,11 @@ public class MaterialDialog extends DialogBase
 
     public Builder dividerColorAttr(@AttrRes int colorAttr) {
       return dividerColor(DialogUtils.resolveColor(this.context, colorAttr));
+    }
+
+    public Builder backgroundCornerSize(int cornerSize) {
+      this.backgroundCornerSize = cornerSize;
+      return this;
     }
 
     public Builder backgroundColor(@ColorInt int color) {
